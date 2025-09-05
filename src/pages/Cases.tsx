@@ -10,37 +10,37 @@ const CASES = [
 export default function Cases() {
   return (
     <section
-      className="container max-w-5xl mx-auto py-10 sm:py-16 px-2 sm:px-6"
+      className="container max-w-5xl mx-auto py-12 sm:py-20 px-2 sm:px-8"
       style={{background:'var(--color-bg-section)', borderRadius:'1.5rem', boxShadow:'0 8px 32px 0 #0004', marginTop:'2rem', marginBottom:'3rem', border:0}}
       aria-labelledby="cases-heading"
     >
       <h2
         id="cases-heading"
-        className="text-3xl sm:text-4xl font-extrabold mb-10 text-center tracking-tight"
+        className="text-3xl sm:text-4xl font-extrabold mb-12 text-center tracking-tight"
         style={{color:'var(--color-point)', textShadow:'0 2px 8px #0008'}}
         tabIndex={-1}
       >
         구축사례
       </h2>
       <div
-        className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10"
+        className="grid grid-cols-1 sm:grid-cols-2 gap-8"
         role="list"
         aria-label="구축사례 목록"
       >
         {CASES.map((c) => (
           <div
             key={c.title}
-            className="group flex flex-col gap-5 p-9 rounded-3xl hover:shadow-2xl hover:-translate-y-1 transition-all duration-200 min-h-[180px] cursor-pointer"
+            className="group flex flex-col gap-3 p-7 rounded-3xl hover:shadow-2xl hover:-translate-y-1 transition-all duration-200 min-h-[180px] cursor-pointer"
             style={{background:'var(--color-bg-card)', color:'var(--color-text-main)', border:'2px solid var(--color-border)', boxShadow:'0 2px 8px #0002'}} 
             tabIndex={0}
             aria-label={`${c.title} 사례 카드`}
           >
-            <div className="font-extrabold text-lg truncate group-hover:underline">{c.title}</div>
-            <div className="text-sm mb-3 min-h-[36px] leading-relaxed">{c.desc}</div>
-            <div className="flex flex-wrap gap-3 text-sm">
-              <span className="rounded-full px-4 py-1 font-semibold shadow-sm" style={{background:'var(--color-bg-section)', color:'var(--color-point)', border:'1px solid var(--color-border)'}}>{c.region}</span>
-              <span className="rounded-full px-4 py-1 font-semibold shadow-sm" style={{background:'var(--color-bg-section)', color:'var(--color-point)', border:'1px solid var(--color-border)'}}>{c.industry}</span>
-              <span className="rounded-full px-4 py-1 font-semibold shadow-sm" style={{background:'var(--color-bg-section)', color:'var(--color-point)', border:'1px solid var(--color-border)'}}>{c.solution}</span>
+            <div className="font-extrabold text-2xl truncate group-hover:underline" style={{color:'var(--color-point)', lineHeight:'1.15'}}>{c.title}</div>
+            <div className="text-lg mb-1 min-h-[36px]" style={{color:'var(--color-text-sub)', lineHeight:'1.35'}}>{c.desc}</div>
+            <div className="flex flex-wrap gap-2 text-base">
+              <span className="rounded-full px-4 py-1 font-semibold shadow-sm" style={{background:'var(--color-bg-section)', color:'var(--color-point)', border:'1px solid var(--color-border)', lineHeight:'1.1'}}>{c.region}</span>
+              <span className="rounded-full px-4 py-1 font-semibold shadow-sm" style={{background:'var(--color-bg-section)', color:'var(--color-point)', border:'1px solid var(--color-border)', lineHeight:'1.1'}}>{c.industry}</span>
+              <span className="rounded-full px-4 py-1 font-semibold shadow-sm" style={{background:'var(--color-bg-section)', color:'var(--color-point)', border:'1px solid var(--color-border)', lineHeight:'1.1'}}>{c.solution}</span>
             </div>
           </div>
         ))}

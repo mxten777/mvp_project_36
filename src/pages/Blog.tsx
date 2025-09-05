@@ -53,29 +53,30 @@ export default function Blog() {
         aria-label="블로그/뉴스 목록"
       >
         {POSTS.map((post, i) => (
-            <div
-              key={i}
-              className="group flex flex-col gap-4 p-7 rounded-3xl hover:shadow-2xl hover:-translate-y-1 transition-all duration-200 min-h-[180px] cursor-pointer"
-              style={{background:'var(--color-bg-card)', color:'var(--color-text-main)', border:'2px solid var(--color-border)', boxShadow:'0 2px 8px #0002'}} 
-              tabIndex={0}
-              aria-label={`${post.title} 블로그 카드`}
-            >
-              <div className="flex items-center gap-3 mb-1">
-                <span
-                  className="inline-block px-3 py-1 rounded-full text-xs font-bold shadow-sm border"
-                  style={{
-                    background: 'var(--color-point-bg)',
-                    color: 'var(--color-point)',
-                    border: '1px solid var(--color-border)'
-                  }}
-                >
-                  {post.category}
-                </span>
-                <span className="text-xs" style={{color:'var(--color-text-sub)'}}>{post.date}</span>
-              </div>
-              <div className="font-extrabold text-lg truncate group-hover:underline" style={{color:'var(--color-point)'}}>{post.title}</div>
-              <div className="text-sm mb-1 min-h-[36px] leading-relaxed" style={{color:'var(--color-text-sub)'}}>{post.summary}</div>
+          <div
+            key={i}
+            className="group flex flex-col gap-3 p-7 rounded-3xl hover:shadow-2xl hover:-translate-y-1 transition-all duration-200 min-h-[180px] cursor-pointer"
+            style={{background:'var(--color-bg-card)', color:'var(--color-text-main)', border:'2px solid var(--color-border)', boxShadow:'0 2px 8px #0002'}} 
+            tabIndex={0}
+            aria-label={`${post.title} 블로그 카드`}
+          >
+            <div className="flex items-center gap-3 mb-1">
+              <span
+                className="inline-block px-3 py-1 rounded-full font-bold shadow-sm border text-base"
+                style={{
+                  background: 'var(--color-point-bg)',
+                  color: 'var(--color-point)',
+                  border: '1px solid var(--color-border)',
+                  lineHeight:'1.1'
+                }}
+              >
+                {post.category}
+              </span>
+              <span className="text-base" style={{color:'var(--color-text-sub)', lineHeight:'1.1'}}>{post.date}</span>
             </div>
+            <div className="font-extrabold text-2xl truncate group-hover:underline" style={{color:'var(--color-point)', lineHeight:'1.15'}}>{post.title}</div>
+            <div className="text-lg mb-1 min-h-[36px]" style={{color:'var(--color-text-sub)', lineHeight:'1.35'}}>{post.summary}</div>
+          </div>
         ))}
       </div>
     </section>

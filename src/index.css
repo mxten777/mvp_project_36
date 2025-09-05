@@ -4,9 +4,12 @@
 
 @layer base {
   :root {
-    --color-bg-main: #18181b;
-    --color-bg-card: #23272f;
-    --color-bg-section: #1e293b;
+  --color-bg-main: #18181b;
+  --color-bg-card: #232a34;
+  --color-bg-section: #1e2530;
+  --color-text-main: #f4f6fa;
+  --color-text-sub: #bfc9d9;
+  --color-border: #2e3743;
     --color-text-main: #f4f4f5;
     --color-text-sub: #a1a1aa;
     --color-point: #38bdf8;
