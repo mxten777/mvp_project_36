@@ -25,19 +25,19 @@ export default function SolutionDetail() {
 
   return (
     <section className="max-w-xl mx-auto my-16 px-2">
-      <div className="bg-gradient-to-br from-[#fffde7] via-[#fffbe7] to-[#ffe0b2] rounded-3xl shadow-xl p-8 sm:p-12 flex flex-col items-center">
-        <h1 className="text-2xl sm:text-3xl font-extrabold text-[#ff9800] mb-7 text-center drop-shadow-sm">{detail.title}</h1>
-        <ul className="w-full text-gray-800 text-base sm:text-lg leading-relaxed space-y-3 mb-8">
+  <div className="bg-[#23272f] rounded-3xl shadow-xl p-8 sm:p-12 flex flex-col items-center ring-1 ring-[#a78bfa]">
+        <h1 className="text-2xl sm:text-3xl font-extrabold text-[#60a5fa] mb-7 text-center drop-shadow-sm">{detail.title}</h1>
+        <ul className="w-full text-[#cbd5e1] text-base sm:text-lg leading-relaxed space-y-3 mb-8">
           {detail.content.trim().split('\n').filter(Boolean).map((line, i) => (
             <li key={i} className="flex items-start gap-2">
-              <span className="mt-1 text-[#ff9800] text-lg">•</span>
+              <span className="mt-1 text-[#38bdf8] text-lg">•</span>
               <span>{line.replace(/^- /, "")}</span>
             </li>
           ))}
         </ul>
         <a
           href="/solutions"
-          className="inline-block px-8 py-2 rounded-full bg-[#ff9800] text-white font-bold shadow-md hover:bg-[#ffa726] transition-colors text-base tracking-wide no-underline focus:ring-2 focus:ring-[#ff9800] focus:outline-none"
+          className="inline-block px-8 py-2 rounded-full bg-[#38bdf8] text-[#18181b] font-bold shadow-md hover:bg-[#0ea5e9] transition-colors text-base tracking-wide no-underline focus:ring-2 focus:ring-[#38bdf8] focus:outline-none"
           style={{ boxShadow: '0 2px 8px 0 #ff980055' }}
         >
           목록으로

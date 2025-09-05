@@ -3,7 +3,7 @@ import ServiceCard, { ServiceIcons } from "../components/ServiceCard";
 export default function Solutions() {
   return (
     <section
-      className="container max-w-5xl mx-auto py-12 sm:py-20 px-2 sm:px-8 bg-gradient-to-br from-[#fffde7] via-[#ffeb3b] to-[#ff9800] rounded-3xl shadow-2xl mt-8 mb-16 border-0"
+      className="container max-w-5xl mx-auto py-12 sm:py-20 px-2 sm:px-8 bg-[#18181b] rounded-3xl shadow-2xl mt-8 mb-16 border-0"
       aria-labelledby="solutions-heading"
     >
       <h2
@@ -18,7 +18,7 @@ export default function Solutions() {
         role="list"
         aria-label="스마트한 솔루션 카드"
       >
-  <div className="bg-white-95 rounded-3xl shadow-xl ring-2 ring-orange-200 border-0 flex-1 min-w-[220px] flex flex-col items-center p-10 sm:p-12 transition-all duration-200" style={{ border: 'none !important' }}>
+  <div className="bg-[#23272f] rounded-3xl shadow-xl flex-1 min-w-[220px] flex flex-col items-center p-10 sm:p-12 transition-all duration-200">
           <ServiceCard
             icon={ServiceIcons.parking}
             title="통합 주차 보안 시스템"
@@ -26,14 +26,14 @@ export default function Solutions() {
           >
             <a
               href="/solutions/parking"
-              className="mt-8 inline-block px-10 py-3 rounded-full bg-[#ff9800] text-white font-extrabold shadow-xl hover:bg-[#ffa726] transition-all text-lg tracking-wide no-underline focus:ring-2 focus:ring-[#ff9800] focus:outline-none"
-              style={{ boxShadow: '0 4px 16px 0 #ff980055' }}
+              className="mt-8 inline-block px-10 py-3 rounded-full bg-[#a78bfa] text-[#18181b] font-extrabold shadow-xl hover:bg-[#7c3aed] transition-all text-lg tracking-wide no-underline focus:ring-2 focus:ring-[#a78bfa] focus:outline-none"
+              style={{ boxShadow: '0 4px 16px 0 #a78bfa55' }}
             >
               상세보기
             </a>
           </ServiceCard>
         </div>
-  <div className="bg-white/95 rounded-3xl shadow-xl ring-2 ring-orange-200/40 !border-0 flex-1 min-w-[220px] flex flex-col items-center p-10 sm:p-12 transition-all duration-200" style={{ border: 'none !important' }}>
+  <div className="bg-[#23272f] rounded-3xl shadow-xl flex-1 min-w-[220px] flex flex-col items-center p-10 sm:p-12 transition-all duration-200">
           <ServiceCard
             icon={ServiceIcons.iot}
             title="IoT 모니터링 시스템"
@@ -41,14 +41,14 @@ export default function Solutions() {
           >
             <a
               href="/solutions/iot"
-              className="mt-8 inline-block px-10 py-3 rounded-full bg-[#ff9800] text-white font-extrabold shadow-xl hover:bg-[#ffa726] transition-all text-lg tracking-wide no-underline focus:ring-2 focus:ring-[#ff9800] focus:outline-none"
-              style={{ boxShadow: '0 4px 16px 0 #ff980055' }}
+              className="mt-8 inline-block px-10 py-3 rounded-full bg-[#a78bfa] text-[#18181b] font-extrabold shadow-xl hover:bg-[#7c3aed] transition-all text-lg tracking-wide no-underline focus:ring-2 focus:ring-[#a78bfa] focus:outline-none"
+              style={{ boxShadow: '0 4px 16px 0 #a78bfa55' }}
             >
               상세보기
             </a>
           </ServiceCard>
         </div>
-  <div className="bg-white/95 rounded-3xl shadow-xl ring-2 ring-orange-200/40 !border-0 flex-1 min-w-[220px] flex flex-col items-center p-10 sm:p-12 transition-all duration-200" style={{ border: 'none !important' }}>
+  <div className="bg-[#23272f] rounded-3xl shadow-xl flex-1 min-w-[220px] flex flex-col items-center p-10 sm:p-12 transition-all duration-200">
           <ServiceCard
             icon={ServiceIcons.cctv}
             title="영상 통합 시스템"
@@ -56,8 +56,8 @@ export default function Solutions() {
           >
             <a
               href="/solutions/cctv"
-              className="mt-8 inline-block px-10 py-3 rounded-full bg-[#ff9800] text-white font-extrabold shadow-xl hover:bg-[#ffa726] transition-all text-lg tracking-wide no-underline focus:ring-2 focus:ring-[#ff9800] focus:outline-none"
-              style={{ boxShadow: '0 4px 16px 0 #ff980055' }}
+              className="mt-8 inline-block px-10 py-3 rounded-full bg-[#a78bfa] text-[#18181b] font-extrabold shadow-xl hover:bg-[#7c3aed] transition-all text-lg tracking-wide no-underline focus:ring-2 focus:ring-[#a78bfa] focus:outline-none"
+              style={{ boxShadow: '0 4px 16px 0 #a78bfa55' }}
             >
               상세보기
             </a>

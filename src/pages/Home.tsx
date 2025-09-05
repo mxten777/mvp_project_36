@@ -15,17 +15,17 @@ function Home() {
         <meta property="og:description" content="스마트한의 주차, IoT, 영상 통합 스마트시티 솔루션" />
       </Helmet>
       <section
-        className="container max-w-5xl mx-auto py-8 sm:py-14 px-4 sm:px-8 text-center bg-gradient-to-br from-[#fffde7] to-[#ffebb6] rounded-3xl shadow-xl mt-6 mb-10 border-0"
+        className="container max-w-5xl mx-auto py-8 sm:py-14 px-4 sm:px-8 text-center bg-[#23272f] rounded-3xl shadow-xl mt-6 mb-10 border-0"
         aria-labelledby="main-heading"
       >
         <h1
           id="main-heading"
-          className="text-3xl sm:text-4xl md:text-5xl font-extrabold mb-4 sm:mb-6 tracking-tight text-[#ff9800] drop-shadow"
+          className="text-3xl sm:text-4xl md:text-5xl font-extrabold mb-4 sm:mb-6 tracking-tight text-[#60a5fa] drop-shadow"
           tabIndex={-1}
         >
-          <span className="inline-block bg-gradient-to-r from-[#ff9800] to-[#ffb74d] bg-clip-text text-transparent">Total Solution for Smart City</span>
+          <span className="inline-block bg-gradient-to-r from-[#38bdf8] to-[#a3e635] bg-clip-text text-transparent">Total Solution for Smart City</span>
         </h1>
-        <p className="mb-8 text-base sm:text-lg text-[#ff9800] max-w-2xl mx-auto font-medium">
+  <p className="mb-8 text-base sm:text-lg text-[#cbd5e1] max-w-2xl mx-auto font-medium">
           스마트한의 주차, IoT, 영상 통합 솔루션
         </p>
         <div
@@ -33,7 +33,7 @@ function Home() {
           role="list"
           aria-label="스마트한 주요 서비스"
         >
-          <div className="bg-white rounded-xl shadow-sm ring-1 ring-orange-100 border-0 outline-none p-4 flex flex-col items-center min-h-[280px] transition-all duration-200 hover:shadow-md hover:-translate-y-1" style={{ border: 'none !important', outline: 'none !important' }}>
+          <div className="bg-[#23272f] rounded-xl shadow-sm ring-1 ring-[#38bdf8] border-0 outline-none p-4 flex flex-col items-center min-h-[280px] transition-all duration-200 hover:shadow-md hover:-translate-y-1" style={{ outline: 'none !important' }}>
             <ServiceCard
               icon={ServiceIcons.parking}
               title="통합 주차 보안 시스템"
@@ -41,14 +41,14 @@ function Home() {
             >
               <a
                 href="/solutions/parking"
-                className="mt-4 inline-block px-5 py-2 rounded-full bg-[#ff9800] text-white font-bold shadow-sm hover:bg-[#ffa726] transition-all text-sm sm:text-base no-underline focus:ring-2 focus:ring-[#ff9800] focus:outline-none border-0"
-                style={{ boxShadow: '0 2px 6px 0 #ff980044', border: 'none !important' }}
+                className="mt-4 inline-block px-5 py-2 rounded-full bg-[#38bdf8] text-[#18181b] font-bold shadow-sm hover:bg-[#0ea5e9] transition-all text-sm sm:text-base no-underline focus:ring-2 focus:ring-[#38bdf8] focus:outline-none border-0"
+                style={{ boxShadow: '0 2px 6px 0 #38bdf844', border: 'none !important' }}
               >
                 상세보기
               </a>
             </ServiceCard>
           </div>
-          <div className="bg-white rounded-xl shadow-sm ring-1 ring-orange-100 border-0 outline-none p-4 flex flex-col items-center min-h-[280px] transition-all duration-200 hover:shadow-md hover:-translate-y-1" style={{ border: 'none !important', outline: 'none !important' }}>
+          <div className="bg-[#23272f] rounded-xl shadow-sm ring-1 ring-[#38bdf8] border-0 outline-none p-4 flex flex-col items-center min-h-[280px] transition-all duration-200 hover:shadow-md hover:-translate-y-1" style={{ outline: 'none !important' }}>
             <ServiceCard
               icon={ServiceIcons.iot}
               title="IoT 모니터링 시스템"
@@ -56,14 +56,14 @@ function Home() {
             >
               <a
                 href="/solutions/iot"
-                className="mt-4 inline-block px-5 py-2 rounded-full bg-[#ff9800] text-white font-bold shadow-sm hover:bg-[#ffa726] transition-all text-sm sm:text-base no-underline focus:ring-2 focus:ring-[#ff9800] focus:outline-none border-0"
-                style={{ boxShadow: '0 2px 6px 0 #ff980044', border: 'none !important' }}
+                className="mt-4 inline-block px-5 py-2 rounded-full bg-[#38bdf8] text-[#18181b] font-bold shadow-sm hover:bg-[#0ea5e9] transition-all text-sm sm:text-base no-underline focus:ring-2 focus:ring-[#38bdf8] focus:outline-none border-0"
+                style={{ boxShadow: '0 2px 6px 0 #38bdf844', border: 'none !important' }}
               >
                 상세보기
               </a>
             </ServiceCard>
           </div>
-          <div className="bg-white rounded-xl shadow-sm ring-1 ring-orange-100 border-0 outline-none p-4 flex flex-col items-center min-h-[280px] transition-all duration-200 hover:shadow-md hover:-translate-y-1" style={{ border: 'none !important', outline: 'none !important' }}>
+          <div className="bg-[#23272f] rounded-xl shadow-sm ring-1 ring-[#38bdf8] border-0 outline-none p-4 flex flex-col items-center min-h-[280px] transition-all duration-200 hover:shadow-md hover:-translate-y-1" style={{ outline: 'none !important' }}>
             <ServiceCard
               icon={ServiceIcons.cctv}
               title="영상 시스템 (CCTV 통합)"
@@ -71,8 +71,8 @@ function Home() {
             >
               <a
                 href="/solutions/cctv"
-                className="mt-4 inline-block px-5 py-2 rounded-full bg-[#ff9800] text-white font-bold shadow-sm hover:bg-[#ffa726] transition-all text-sm sm:text-base no-underline focus:ring-2 focus:ring-[#ff9800] focus:outline-none border-0"
-                style={{ boxShadow: '0 2px 6px 0 #ff980044', border: 'none !important' }}
+                className="mt-4 inline-block px-5 py-2 rounded-full bg-[#38bdf8] text-[#18181b] font-bold shadow-sm hover:bg-[#0ea5e9] transition-all text-sm sm:text-base no-underline focus:ring-2 focus:ring-[#38bdf8] focus:outline-none border-0"
+                style={{ boxShadow: '0 2px 6px 0 #38bdf844', border: 'none !important' }}
               >
                 상세보기
               </a>
@@ -81,7 +81,7 @@ function Home() {
         </div>
         <div className="flex flex-col items-center my-8 sm:my-10">
           <Button
-            className="px-6 py-2 text-base font-medium rounded-full border border-[#ff9800] bg-white text-[#ff9800] shadow-sm hover:bg-[#ff9800] hover:text-white focus-visible:ring-2 focus-visible:ring-[#ff9800] focus-visible:outline-none transition-all duration-200 flex items-center gap-2"
+            className="px-6 py-2 text-base font-medium rounded-full border border-[#38bdf8] bg-[#38bdf8] text-white shadow-sm hover:bg-[#0ea5e9] hover:text-white focus-visible:ring-2 focus-visible:ring-[#38bdf8] focus-visible:outline-none transition-all duration-200 flex items-center gap-2"
             aria-label="상담 문의하기"
             onClick={() => setModalOpen(true)}
           >

@@ -4,7 +4,7 @@ import { Helmet } from "react-helmet-async";
 export default function IoTSystem() {
         {/* 서비스 상세 설명 섹션 */}
         <div className="mb-12 pb-8 border-b border-orange-100">
-          <h2 className="text-xl font-bold text-[#ff9800] mb-4">서비스 상세 설명</h2>
+          <h2 className="text-xl font-bold text-[#60a5fa] mb-4">서비스 상세 설명</h2>
           <ul className="list-disc pl-6 text-gray-700 space-y-2">
             <li>실시간 원격 모니터링으로 현장 상황을 즉시 파악</li>
             <li>신재생에너지(태양광, 풍력 등) 통합 관리로 에너지 효율 극대화</li>
@@ -17,9 +17,9 @@ export default function IoTSystem() {
         <div className="mb-12 pb-8 border-b border-orange-100">
           <h2 className="text-xl font-bold text-[#ff9800] mb-4">자주 묻는 질문(FAQ)</h2>
           <div className="space-y-4">
-            <div className="bg-[#fffde7] rounded-lg p-4 shadow">
+            <div className="bg-[#23272f] rounded-lg p-4 shadow">
               <div className="font-semibold text-[#ff9800] mb-1">Q. IoT 시스템은 어떤 현장에 적용할 수 있나요?</div>
-              <div className="text-gray-700">A. 스마트팜, 신재생에너지 발전소, 공장, 빌딩 등 다양한 현장에 맞춤 적용이 가능합니다.</div>
+              <div className="text-[#cbd5e1]">A. 스마트팜, 신재생에너지 발전소, 공장, 빌딩 등 다양한 현장에 맞춤 적용이 가능합니다.</div>
             </div>
             <div className="bg-[#fffde7] rounded-lg p-4 shadow">
               <div className="font-semibold text-[#ff9800] mb-1">Q. 모바일에서도 관리가 가능한가요?</div>
@@ -27,7 +27,7 @@ export default function IoTSystem() {
             </div>
             <div className="bg-[#fffde7] rounded-lg p-4 shadow">
               <div className="font-semibold text-[#ff9800] mb-1">Q. 데이터 분석 리포트는 어떻게 제공되나요?</div>
-              <div className="text-gray-700">A. 웹/앱에서 실시간 통계와 분석 리포트를 확인할 수 있습니다.</div>
+              <div className="text-[#cbd5e1]">A. 웹/앱에서 실시간 통계와 분석 리포트를 확인할 수 있습니다.</div>
             </div>
           </div>
         </div>

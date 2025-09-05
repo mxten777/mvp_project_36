@@ -6,8 +6,8 @@ const navItems = [
     to: "/solutions", 
     label: "솔루션", 
     icon: (
-      <svg width="22" height="22" fill="none">
-        <rect x="4" y="8" width="14" height="8" rx="2" fill="#ff9800"/>
+      <svg width="20" height="20" fill="none">
+  <rect x="4" y="8" width="12" height="6" rx="2" fill="#a78bfa"/>
       </svg>
     )
   },
@@ -15,8 +15,8 @@ const navItems = [
     to: "/cases", 
     label: "사례", 
     icon: (
-      <svg width="22" height="22" fill="none">
-        <circle cx="11" cy="11" r="10" fill="#ff9800"/>
+      <svg width="20" height="20" fill="none">
+  <circle cx="10" cy="10" r="8" fill="#a78bfa"/>
       </svg>
     ) 
   },
@@ -24,8 +24,8 @@ const navItems = [
     to: "/blog", 
     label: "블로그", 
     icon: (
-      <svg width="22" height="22" fill="none">
-        <rect x="4" y="6" width="14" height="10" rx="2" fill="#ff9800"/>
+      <svg width="20" height="20" fill="none">
+  <rect x="4" y="5" width="12" height="8" rx="2" fill="#a78bfa"/>
       </svg>
     ) 
   },
@@ -33,8 +33,8 @@ const navItems = [
     to: "/support", 
     label: "고객지원", 
     icon: (
-      <svg width="22" height="22" fill="none">
-        <rect x="6" y="6" width="10" height="10" rx="5" fill="#ff9800"/>
+      <svg width="20" height="20" fill="none">
+  <rect x="5" y="5" width="10" height="10" rx="5" fill="#a78bfa"/>
       </svg>
     ) 
   },
@@ -42,8 +42,8 @@ const navItems = [
     to: "/about", 
     label: "소개", 
     icon: (
-      <svg width="22" height="22" fill="none">
-        <rect x="6" y="6" width="10" height="10" rx="2" fill="#ff9800"/>
+      <svg width="20" height="20" fill="none">
+  <rect x="5" y="5" width="10" height="10" rx="2" fill="#a78bfa"/>
       </svg>
     ) 
   },
@@ -51,8 +51,8 @@ const navItems = [
     to: "/admin", 
     label: "Admin", 
     icon: (
-      <svg width="22" height="22" fill="none">
-        <rect x="4" y="8" width="14" height="6" rx="2" fill="#ff9800"/>
+      <svg width="20" height="20" fill="none">
+  <rect x="4" y="8" width="12" height="4" rx="2" fill="#a78bfa"/>
       </svg>
     ) 
   },
@@ -103,14 +103,14 @@ function Header() {
   }, [open]);
 
   return (
-    <header className="bg-gradient-to-r from-[#ffeb3b] via-[#fffde7] to-[#ff9800] shadow-md sticky top-0 z-40">
-      <div className="max-w-6xl mx-auto px-4 py-3">
+  <header className="bg-[#18181b] shadow-md sticky top-0 z-40 text-[#f4f4f5]">
+  <div className="max-w-6xl mx-auto px-4 py-3">
         <div className="flex items-center justify-between relative">
           {/* 로고 */}
-          <Link to="/" className="flex items-center gap-2 font-extrabold text-2xl sm:text-3xl text-[#ff9800] tracking-tight z-30">
+          <Link to="/" className="flex items-center gap-2 font-extrabold text-2xl sm:text-3xl text-[#60a5fa] tracking-tight z-30">
             <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <circle cx="16" cy="16" r="16" fill="#ff9800" />
-              <text x="16" y="21" textAnchor="middle" fontSize="16" fill="#fff" fontWeight="bold">S</text>
+              <circle cx="16" cy="16" r="16" fill="#38bdf8" />
+              <text x="16" y="21" textAnchor="middle" fontSize="16" fill="#18181b" fontWeight="bold">S</text>
             </svg>
             <span className="whitespace-nowrap">스마트한</span>
           </Link>
@@ -122,7 +122,7 @@ function Header() {
                 <li key={item.to}>
                   <Link
                     to={item.to}
-                    className="px-3 py-2 rounded-lg text-[#ff9800] hover:bg-[#ffe0b2] hover:text-[#e65100] transition-colors duration-150 text-sm md:text-base font-bold flex items-center gap-1"
+                    className="px-3 py-2 rounded-lg text-[#60a5fa] bg-[#23272f] hover:bg-[#1e293b] hover:text-[#38bdf8] transition-colors duration-150 text-sm md:text-base font-bold flex items-center gap-1"
                   >
                     {item.icon && <span className="hidden md:inline-block">{item.icon}</span>}
                     <span>{item.label}</span>
@@ -135,11 +135,11 @@ function Header() {
           {/* 햄버거 버튼 (모바일) */}
           <button
             ref={buttonRef}
-            className="sm:hidden p-2 rounded-md focus:outline-none focus:ring-2 focus:ring-[#ff9800] bg-white/90 border border-orange-100 shadow-sm transition-colors duration-200 z-30"
+            className="sm:hidden p-2 rounded-md focus:outline-none focus:ring-2 focus:ring-[#60a5fa] bg-[#23272f] border border-[#60a5fa] text-[#f4f4f5] shadow-sm transition-colors duration-200 z-30"
             aria-label={open ? "메뉴 닫기" : "메뉴 열기"}
             onClick={() => setOpen(!open)}
           >
-            <svg width="24" height="24" fill="none" stroke="#ff9800" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" viewBox="0 0 24 24">
+            <svg width="24" height="24" fill="none" stroke="#38bdf8" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" viewBox="0 0 24 24">
               {open ? (
                 <path d="M18 6L6 18M6 6l12 12" />
               ) : (
@@ -156,11 +156,11 @@ function Header() {
         {/* 모바일 네비게이션 메뉴 */}
         <div 
           ref={menuRef}
-          className={`sm:hidden fixed inset-0 bg-black/20 z-20 transition-opacity duration-300 ${
+          className={`sm:hidden fixed inset-0 bg-black/60 z-20 transition-opacity duration-300 ${
             open ? "opacity-100" : "opacity-0 pointer-events-none"
           }`}
         >
-          <div className={`bg-white h-auto max-h-[90vh] overflow-y-auto w-[80%] max-w-[320px] fixed top-[60px] right-0 shadow-xl rounded-bl-2xl transition-transform duration-300 transform ${
+          <div className={`bg-[#23272f] h-auto max-h-[90vh] overflow-y-auto w-[80%] max-w-[320px] fixed top-[60px] right-0 shadow-xl rounded-bl-2xl transition-transform duration-300 transform ${
             open ? "translate-x-0" : "translate-x-full"
           }`}>
             <nav className="p-4">
@@ -169,7 +169,7 @@ function Header() {
                   <li key={item.to} className="w-full">
                     <Link
                       to={item.to}
-                      className="flex items-center gap-3 w-full px-4 py-3 rounded-lg text-[#ff9800] hover:bg-[#ffe0b2] hover:text-[#e65100] transition-colors duration-150 text-base font-bold"
+                      className="flex items-center gap-3 w-full px-4 py-3 rounded-lg text-[#60a5fa] bg-[#23272f] hover:bg-[#1e293b] hover:text-[#38bdf8] transition-colors duration-150 text-base font-bold"
                       onClick={() => setOpen(false)}
                     >
                       {item.icon}

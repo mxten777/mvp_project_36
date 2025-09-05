@@ -3,7 +3,7 @@ import { Helmet } from "react-helmet-async";
 
 export default function CCTVSystem() {
         {/* 서비스 상세 설명 섹션 */}
-        <div className="mb-12 pb-8 border-b border-orange-100">
+          <div className="mb-12 pb-8 border-b border-[#38bdf8]">
           <h2 className="text-xl font-bold text-[#ff9800] mb-4">서비스 상세 설명</h2>
           <ul className="list-disc pl-6 text-gray-700 space-y-2">
             <li>다수 CCTV를 통합 관리하여 보안 효율 극대화</li>
@@ -17,9 +17,9 @@ export default function CCTVSystem() {
         <div className="mb-12 pb-8 border-b border-orange-100">
           <h2 className="text-xl font-bold text-[#ff9800] mb-4">자주 묻는 질문(FAQ)</h2>
           <div className="space-y-4">
-            <div className="bg-[#fffde7] rounded-lg p-4 shadow">
-              <div className="font-semibold text-[#ff9800] mb-1">Q. 기존 CCTV와 연동이 가능한가요?</div>
-              <div className="text-gray-700">A. 네, 대부분의 CCTV 시스템과 연동하여 통합 관리가 가능합니다.</div>
+              <div className="bg-[#23272f] rounded-lg p-4 shadow">
+                <div className="font-semibold text-[#60a5fa] mb-1">Q. 기존 CCTV와 연동이 가능한가요?</div>
+                <div className="text-[#cbd5e1]">A. 네, 대부분의 CCTV 시스템과 연동하여 통합 관리가 가능합니다.</div>
             </div>
             <div className="bg-[#fffde7] rounded-lg p-4 shadow">
               <div className="font-semibold text-[#ff9800] mb-1">Q. 모바일에서도 실시간 영상 확인이 가능한가요?</div>

@@ -3,19 +3,32 @@
 @tailwind utilities;
 
 @layer base {
-  /* 강화된 테두리 제거 */
-  div, a, button, input, section, article, nav, aside, main, header, footer {
-    border: none !important;
+  :root {
+    --color-bg-main: #18181b;
+    --color-bg-card: #23272f;
+    --color-bg-section: #1e293b;
+    --color-text-main: #f4f4f5;
+    --color-text-sub: #a1a1aa;
+    --color-point: #38bdf8;
+    --color-border: #7c3aed;
+    --color-success: #10b981;
+    --color-error: #ef4444;
+    --color-warning: #f59e42;
+    --color-btn: #a78bfa;
+    --color-btn-dark: #18181b;
+  }
+  /* 강화된 테두리 제거 (border 속성은 완전히 제거) */
+  a, button, input, section, article, nav, aside, main, header, footer {
     outline: none !important;
     -webkit-appearance: none !important;
     -moz-appearance: none !important;
     appearance: none !important;
     box-shadow: none !important;
   }
+  /* 테두리 유틸리티 클래스 예외 처리 부분 제거 (Tailwind border 유틸리티 정상 동작) */
 
-  /* 특별히 카드 컴포넌트에 적용되는 추가 스타일 */
-  .rounded-3xl, [class*="rounded"] {
-    border: 0 !important;
+  /* 특별히 카드 컴포넌트에 적용되는 추가 스타일 (border 관련 글로벌 스타일 완전 제거) */
+  .rounded-3xl {
     outline: 0 !important;
   }
 
@@ -23,6 +36,35 @@
   *:focus {
     outline: none !important;
     border-color: transparent !important;
+  }
+
+  /* 다크 계열 전체 배경 및 텍스트 컬러 적용 */
+  html, body {
+    background: var(--color-bg-main) !important;
+    color: var(--color-text-main) !important;
+    line-height: 1.25 !important;
+    letter-spacing: 0 !important;
+  }
+  p, ul, ol, li, table, th, td, h1, h2, h3, h4, h5, h6 {
+    color: var(--color-text-main) !important;
+    line-height: 1.25 !important;
+  }
+  /* Tailwind 기본 행간 재정의 */
+  .leading-relaxed, .leading-normal, .leading-loose, .leading-snug, .leading-tight, .leading-none {
+    line-height: 1.25 !important;
+  }
+
+  /* 전체 행간(line-height) 조정 */
+  html, body {
+    line-height: 1.25 !important;
+    letter-spacing: 0 !important;
+  }
+  p, ul, ol, li, table, th, td, h1, h2, h3, h4, h5, h6 {
+    line-height: 1.25 !important;
+  }
+  /* Tailwind 기본 행간 재정의 */
+  .leading-relaxed, .leading-normal, .leading-loose, .leading-snug, .leading-tight, .leading-none {
+    line-height: 1.25 !important;
   }
 }
 

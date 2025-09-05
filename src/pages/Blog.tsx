@@ -10,18 +10,21 @@ export default function Blog() {
   // TODO: 실제 검색/필터링 로직 구현 예정
   return (
     <section
-      className="container max-w-3xl mx-auto py-12 sm:py-20 px-2 sm:px-6 bg-gradient-to-br from-[#fffde7] via-[#ffeb3b] to-[#ff9800]/30 rounded-3xl shadow-2xl mt-8 mb-12 border-0"
+  className="container max-w-3xl mx-auto py-12 sm:py-20 px-2 sm:px-6"
+  style={{background:'var(--color-bg-section)', borderRadius:'1.5rem', boxShadow:'0 8px 32px 0 #0004', marginTop:'2rem', marginBottom:'3rem', border:0}}
       aria-labelledby="blog-heading"
     >
       <h2
         id="blog-heading"
-        className="text-3xl sm:text-4xl font-extrabold mb-12 text-center tracking-tight text-[#ff9800] drop-shadow"
+          className="text-3xl sm:text-4xl font-extrabold mb-12 text-center tracking-tight"
+          style={{color:'var(--color-point)', textShadow:'0 2px 8px #0008'}}
         tabIndex={-1}
       >
-        블로그 & 뉴스
+          블로그 & 뉴스
       </h2>
       <form
         className="flex flex-wrap gap-4 sm:gap-6 justify-center mb-12 mt-2 bg-white/90 rounded-2xl shadow p-5 border border-orange-100"
+          style={{background:'var(--color-bg-card)', borderRadius:'1rem', boxShadow:'0 2px 8px #0002', border:'1px solid var(--color-border)', padding:'1.25rem'}} 
         aria-label="블로그 검색 및 카테고리 필터"
         role="search"
         tabIndex={0}
@@ -29,14 +32,16 @@ export default function Blog() {
         <label htmlFor="blog-search" className="sr-only">검색어 입력</label>
         <input
           id="blog-search"
-          className="border-0 rounded-lg px-5 py-3 w-44 sm:w-64 text-base bg-[#fffde7] text-[#ff9800] font-bold focus-visible:ring-2 focus-visible:ring-[#ff9800] shadow"
+            className="border-0 rounded-lg px-5 py-3 w-44 sm:w-64 text-base font-bold focus-visible:ring-2 shadow"
+            style={{background:'var(--color-bg-section)', color:'var(--color-point)', boxShadow:'0 1px 4px #0001'}} 
           placeholder="검색어 입력"
           aria-label="검색어 입력"
         />
         <label htmlFor="blog-category" className="sr-only">카테고리</label>
         <select
           id="blog-category"
-          className="border-0 rounded-lg px-5 py-3 text-base bg-[#fffde7] text-[#ff9800] font-bold focus-visible:ring-2 focus-visible:ring-[#ff9800] shadow"
+            className="border-0 rounded-lg px-5 py-3 text-base font-bold focus-visible:ring-2 shadow"
+            style={{background:'var(--color-bg-section)', color:'var(--color-point)', boxShadow:'0 1px 4px #0001'}} 
           aria-label="카테고리 선택"
         >
           {CATEGORIES.map(cat => <option key={cat}>{cat}</option>)}
@@ -48,19 +53,29 @@ export default function Blog() {
         aria-label="블로그/뉴스 목록"
       >
         {POSTS.map((post, i) => (
-          <div
-            key={i}
-            className="group flex flex-col gap-4 p-7 rounded-3xl bg-white/95 shadow-lg border border-orange-200 hover:shadow-2xl hover:-translate-y-1 transition-all duration-200 min-h-[180px] focus-within:ring-2 focus-within:ring-[#ff9800] cursor-pointer"
-            tabIndex={0}
-            aria-label={`${post.title} 블로그 카드`}
-          >
-            <div className="flex items-center gap-3 mb-1">
-              <span className={`inline-block px-3 py-1 rounded-full text-xs font-bold shadow-sm bg-[#ffeb3b] text-[#e65100] border border-orange-200`}>{post.category}</span>
-              <span className="text-xs text-gray-400 ml-auto">{post.date}</span>
+            <div
+              key={i}
+              className="group flex flex-col gap-4 p-7 rounded-3xl hover:shadow-2xl hover:-translate-y-1 transition-all duration-200 min-h-[180px] cursor-pointer"
+              style={{background:'var(--color-bg-card)', color:'var(--color-text-main)', border:'2px solid var(--color-border)', boxShadow:'0 2px 8px #0002'}} 
+              tabIndex={0}
+              aria-label={`${post.title} 블로그 카드`}
+            >
+              <div className="flex items-center gap-3 mb-1">
+                <span
+                  className="inline-block px-3 py-1 rounded-full text-xs font-bold shadow-sm border"
+                  style={{
+                    background: 'var(--color-point-bg)',
+                    color: 'var(--color-point)',
+                    border: '1px solid var(--color-border)'
+                  }}
+                >
+                  {post.category}
+                </span>
+                <span className="text-xs" style={{color:'var(--color-text-sub)'}}>{post.date}</span>
+              </div>
+              <div className="font-extrabold text-lg truncate group-hover:underline" style={{color:'var(--color-point)'}}>{post.title}</div>
+              <div className="text-sm mb-1 min-h-[36px] leading-relaxed" style={{color:'var(--color-text-sub)'}}>{post.summary}</div>
             </div>
-            <div className="font-extrabold text-orange-700 text-lg truncate group-hover:underline">{post.title}</div>
-            <div className="text-sm text-orange-700/80 mb-1 min-h-[36px] leading-relaxed">{post.summary}</div>
-          </div>
         ))}
       </div>
     </section>
