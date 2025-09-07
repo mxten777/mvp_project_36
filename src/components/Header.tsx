@@ -7,7 +7,7 @@ const navItems = [
     label: "솔루션", 
     icon: (
       <svg width="20" height="20" fill="none">
-  <rect x="4" y="8" width="12" height="6" rx="2" fill="#a78bfa"/>
+    <rect x="4" y="5" width="12" height="8" rx="2" fill="#22c55e"/>
       </svg>
     )
   },
@@ -16,7 +16,7 @@ const navItems = [
     label: "사례", 
     icon: (
       <svg width="20" height="20" fill="none">
-  <circle cx="10" cy="10" r="8" fill="#a78bfa"/>
+    <rect x="4" y="5" width="12" height="8" rx="2" fill="#22c55e"/>
       </svg>
     ) 
   },
@@ -25,7 +25,7 @@ const navItems = [
     label: "블로그", 
     icon: (
       <svg width="20" height="20" fill="none">
-  <rect x="4" y="5" width="12" height="8" rx="2" fill="#a78bfa"/>
+    <rect x="4" y="5" width="12" height="8" rx="2" fill="#22c55e"/>
       </svg>
     ) 
   },
@@ -34,7 +34,7 @@ const navItems = [
     label: "고객지원", 
     icon: (
       <svg width="20" height="20" fill="none">
-  <rect x="5" y="5" width="10" height="10" rx="5" fill="#a78bfa"/>
+    <rect x="4" y="5" width="12" height="8" rx="2" fill="#22c55e"/>
       </svg>
     ) 
   },
@@ -43,7 +43,7 @@ const navItems = [
     label: "소개", 
     icon: (
       <svg width="20" height="20" fill="none">
-  <rect x="5" y="5" width="10" height="10" rx="2" fill="#a78bfa"/>
+    <rect x="4" y="5" width="12" height="8" rx="2" fill="#22c55e"/>
       </svg>
     ) 
   },
@@ -52,7 +52,7 @@ const navItems = [
     label: "Admin", 
     icon: (
       <svg width="20" height="20" fill="none">
-  <rect x="4" y="8" width="12" height="4" rx="2" fill="#a78bfa"/>
+    <rect x="4" y="5" width="12" height="8" rx="2" fill="#22c55e"/>
       </svg>
     ) 
   },
@@ -110,9 +110,9 @@ function Header() {
           <Link to="/" className="flex items-center gap-2 font-extrabold text-2xl sm:text-3xl text-[#60a5fa] tracking-tight z-30">
             <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
               <circle cx="16" cy="16" r="16" fill="#38bdf8" />
-              <text x="16" y="21" textAnchor="middle" fontSize="16" fill="#18181b" fontWeight="bold">S</text>
+              <text x="16" y="21" textAnchor="middle" fontSize="14" fill="#18181b" fontWeight="bold">MXT</text>
             </svg>
-            <span className="whitespace-nowrap">스마트한</span>
+            <span className="whitespace-nowrap">엠엑스텐</span>
           </Link>
 
           {/* 데스크톱 네비게이션 */}

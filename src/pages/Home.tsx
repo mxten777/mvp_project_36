@@ -33,7 +33,7 @@ function Home() {
           role="list"
           aria-label="스마트한 주요 서비스"
         >
-          <div className="bg-[#23272f] rounded-xl shadow-sm ring-1 ring-[#38bdf8] border-0 outline-none p-4 flex flex-col items-center min-h-[280px] transition-all duration-200 hover:shadow-md hover:-translate-y-1" style={{ outline: 'none !important' }}>
+          <div className="bg-[#23272f] rounded-xl shadow-sm border-0 outline-none p-4 flex flex-col items-center min-h-[280px] transition-all duration-200 hover:shadow-md hover:-translate-y-1" style={{ outline: 'none !important' }}>
             <ServiceCard
               icon={ServiceIcons.parking}
               title="통합 주차 보안 시스템"
@@ -48,7 +48,7 @@ function Home() {
               </a>
             </ServiceCard>
           </div>
-          <div className="bg-[#23272f] rounded-xl shadow-sm ring-1 ring-[#38bdf8] border-0 outline-none p-4 flex flex-col items-center min-h-[280px] transition-all duration-200 hover:shadow-md hover:-translate-y-1" style={{ outline: 'none !important' }}>
+          <div className="bg-[#23272f] rounded-xl shadow-sm border-0 outline-none p-4 flex flex-col items-center min-h-[280px] transition-all duration-200 hover:shadow-md hover:-translate-y-1" style={{ outline: 'none !important' }}>
             <ServiceCard
               icon={ServiceIcons.iot}
               title="IoT 모니터링 시스템"
@@ -63,7 +63,7 @@ function Home() {
               </a>
             </ServiceCard>
           </div>
-          <div className="bg-[#23272f] rounded-xl shadow-sm ring-1 ring-[#38bdf8] border-0 outline-none p-4 flex flex-col items-center min-h-[280px] transition-all duration-200 hover:shadow-md hover:-translate-y-1" style={{ outline: 'none !important' }}>
+          <div className="bg-[#23272f] rounded-xl shadow-sm border-0 outline-none p-4 flex flex-col items-center min-h-[280px] transition-all duration-200 hover:shadow-md hover:-translate-y-1" style={{ outline: 'none !important' }}>
             <ServiceCard
               icon={ServiceIcons.cctv}
               title="영상 시스템 (CCTV 통합)"

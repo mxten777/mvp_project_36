@@ -3,24 +3,33 @@
 @tailwind utilities;
 
 @layer base {
+  /* 통일된 다크 테마 컬러 변수 */
   :root {
-  --color-bg-main: #18181b;
-  --color-bg-card: #232a34;
-  --color-bg-section: #1e2530;
-  --color-text-main: #f4f6fa;
-  --color-text-sub: #bfc9d9;
-  --color-border: #2e3743;
+    --color-bg-main: #18181b;
+    --color-bg-section: #1e2530;
+    --color-bg-card: #232a34;
     --color-text-main: #f4f4f5;
     --color-text-sub: #a1a1aa;
-    --color-point: #38bdf8;
-    --color-border: #7c3aed;
+    --color-border: #232a34;
+    --color-point: #7dd3fc;
     --color-success: #10b981;
     --color-error: #ef4444;
     --color-warning: #f59e42;
     --color-btn: #a78bfa;
     --color-btn-dark: #18181b;
   }
-  /* 강화된 테두리 제거 (border 속성은 완전히 제거) */
+
+  /* 카드 및 섹션의 불필요한 테두리/그림자/아웃라인 제거 */
+  .solutions-section,
+  .solutions-section *,
+  .solutions-card,
+  .solutions-card * {
+    border: none !important;
+    box-shadow: none !important;
+    outline: none !important;
+  }
+
+  /* 모든 주요 요소의 테두리/아웃라인/그림자 제거 */
   a, button, input, section, article, nav, aside, main, header, footer {
     outline: none !important;
     -webkit-appearance: none !important;
@@ -28,50 +37,38 @@
     appearance: none !important;
     box-shadow: none !important;
   }
-  /* 테두리 유틸리티 클래스 예외 처리 부분 제거 (Tailwind border 유틸리티 정상 동작) */
 
-  /* 특별히 카드 컴포넌트에 적용되는 추가 스타일 (border 관련 글로벌 스타일 완전 제거) */
+  /* 포커스 상태에서 아웃라인 제거 */
+  *:focus {
+    outline: none !important;
+  }
+
+  /* 카드 둥근 모서리 아웃라인 제거 */
   .rounded-3xl {
     outline: 0 !important;
   }
 
-  /* 포커스 상태에서 강제 테두리 방지 */
-  *:focus {
-    outline: none !important;
-    border-color: transparent !important;
-  }
-
-  /* 다크 계열 전체 배경 및 텍스트 컬러 적용 */
+  /* 다크 테마 배경 및 텍스트 컬러, 행간/자간 통일 */
   html, body {
     background: var(--color-bg-main) !important;
     color: var(--color-text-main) !important;
     line-height: 1.25 !important;
     letter-spacing: 0 !important;
+    font-family: 'Pretendard', 'Noto Sans KR', 'Apple SD Gothic Neo', Arial, sans-serif !important;
   }
   p, ul, ol, li, table, th, td, h1, h2, h3, h4, h5, h6 {
     color: var(--color-text-main) !important;
     line-height: 1.25 !important;
-  }
-  /* Tailwind 기본 행간 재정의 */
-  .leading-relaxed, .leading-normal, .leading-loose, .leading-snug, .leading-tight, .leading-none {
-    line-height: 1.25 !important;
+    font-family: inherit !important;
   }
 
-  /* 전체 행간(line-height) 조정 */
-  html, body {
-    line-height: 1.25 !important;
-    letter-spacing: 0 !important;
-  }
-  p, ul, ol, li, table, th, td, h1, h2, h3, h4, h5, h6 {
-    line-height: 1.25 !important;
-  }
-  /* Tailwind 기본 행간 재정의 */
+  /* Tailwind 행간 유틸리티 통일 */
   .leading-relaxed, .leading-normal, .leading-loose, .leading-snug, .leading-tight, .leading-none {
     line-height: 1.25 !important;
   }
 }
 
-/* 백그라운드 클래스 추가 */
+/* 밝은 배경 유틸리티 */
 .bg-white-95 {
   background-color: rgba(255, 255, 255, 0.95) !important;
 }
