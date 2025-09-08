@@ -8,7 +8,7 @@ export default function Support() {
     >
       <h2
         id="support-heading"
-        className="text-3xl sm:text-4xl font-extrabold mb-12 text-center tracking-tight"
+  className="text-2xl sm:text-3xl font-extrabold mb-8 text-center tracking-tight"
         style={{color:'var(--color-point)', textShadow:'0 2px 8px #0008'}}
         tabIndex={-1}
       >

@@ -10,7 +10,7 @@ export default function About() {
     >
       <h2
         id="about-heading"
-        className="text-3xl sm:text-4xl font-extrabold mb-12 text-center tracking-tight"
+  className="text-2xl sm:text-3xl font-extrabold mb-8 text-center tracking-tight"
         style={{color:'var(--color-point)', textShadow:'0 2px 8px #0008'}}
         tabIndex={-1}
       >
@@ -25,7 +25,7 @@ export default function About() {
             <li>2025 스마트시티 통합 플랫폼 출시</li>
             <li>2023 IoT 기반 주차 시스템 전국 100개소 도입</li>
             <li>2021 AI영상분석 솔루션 개발</li>
-            <li>2018 스마트한 설립</li>
+            <li>2018 엠엑스텐 설립</li>
           </ul>
         </div>
       </div>
@@ -59,7 +59,7 @@ export default function About() {
         <div className="rounded-2xl shadow-lg"
           style={{background:'var(--color-bg-card)', border:'1px solid var(--color-border)', padding:'1.75rem'}} >
           <h3 id="about-location" className="text-xl sm:text-2xl font-bold mb-4" style={{color:'var(--color-point)'}}>오시는 길</h3>
-          <p className="text-base" style={{color:'var(--color-text-sub)'}}>서울특별시 강남구 테헤란로 123, 10층</p>
+          <p className="text-base" style={{color:'var(--color-text-sub)'}}>서울특별시 강남구 역삼로 138, 5층</p>
         </div>
       </div>
     </section>
