@@ -9,7 +9,7 @@ export default function Support() {
       <h2
         id="support-heading"
   className="text-2xl sm:text-3xl font-extrabold mb-8 text-center tracking-tight"
-        style={{color:'var(--color-point)', textShadow:'0 2px 8px #0008'}}
+  style={{color:'var(--color-point)'}}
         tabIndex={-1}
       >
         고객지원
@@ -25,7 +25,7 @@ export default function Support() {
           <label htmlFor="support-name" className="sr-only">이름</label>
           <input
             id="support-name"
-            className="w-full border-0 rounded-lg px-5 py-3 text-lg font-bold focus-visible:ring-2 shadow"
+            className="w-full border-0 rounded-lg px-5 py-4 text-lg font-bold focus-visible:ring-2 shadow min-h-[44px]"
             style={{background:'var(--color-bg-section)', color:'var(--color-point)', lineHeight:'1.35'}}
             placeholder="이름"
             required
@@ -34,7 +34,7 @@ export default function Support() {
           <label htmlFor="support-email" className="sr-only">이메일</label>
           <input
             id="support-email"
-            className="w-full border-0 rounded-lg px-5 py-3 text-lg font-bold focus-visible:ring-2 shadow"
+            className="w-full border-0 rounded-lg px-5 py-4 text-lg font-bold focus-visible:ring-2 shadow min-h-[44px]"
             style={{background:'var(--color-bg-section)', color:'var(--color-point)', lineHeight:'1.35'}}
             placeholder="이메일"
             type="email"
@@ -44,7 +44,7 @@ export default function Support() {
           <label htmlFor="support-message" className="sr-only">문의 내용</label>
           <textarea
             id="support-message"
-            className="w-full border-0 rounded-lg px-5 py-3 text-lg font-bold focus-visible:ring-2 shadow min-h-[120px]"
+            className="w-full border-0 rounded-lg px-5 py-4 text-lg font-bold focus-visible:ring-2 shadow min-h-[120px]"
             style={{background:'var(--color-bg-section)', color:'var(--color-point)', lineHeight:'1.35'}}
             placeholder="문의 내용"
             rows={4}
@@ -53,7 +53,7 @@ export default function Support() {
           />
           <button
             type="submit"
-            className="px-6 py-3 rounded-lg font-bold text-lg shadow transition-colors"
+            className="px-7 py-4 rounded-lg font-bold text-lg shadow transition-colors min-h-[44px] min-w-[44px]"
             style={{background:'var(--color-point)', color:'var(--color-btn-dark)', lineHeight:'1.1'}}
             aria-label="문의하기"
           >

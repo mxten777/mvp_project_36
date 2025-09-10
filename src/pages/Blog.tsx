@@ -10,21 +10,31 @@ export default function Blog() {
   // TODO: 실제 검색/필터링 로직 구현 예정
   return (
     <section
-  className="container max-w-3xl mx-auto py-12 sm:py-20 px-2 sm:px-6"
-  style={{background:'var(--color-bg-section)', borderRadius:'1.5rem', boxShadow:'0 8px 32px 0 #0004', marginTop:'2rem', marginBottom:'3rem', border:0}}
+      className="container max-w-3xl mx-auto py-12 sm:py-20 px-2 sm:px-6 rounded-3xl shadow-2xl mt-8 mb-12 border-0 relative overflow-hidden focus-within:ring-2 focus-within:ring-point"
+      style={{
+        background: 'linear-gradient(135deg, var(--color-bg-section) 80%, var(--color-point-bg) 100%)',
+        borderRadius: '1.5rem',
+        boxShadow: '0 8px 32px 0 #0004',
+        marginTop: '2rem',
+        marginBottom: '3rem',
+        border: 0,
+        zIndex: 1
+      }}
       aria-labelledby="blog-heading"
+      aria-live="polite"
+      tabIndex={0}
     >
       <h2
         id="blog-heading"
-          className="text-2xl sm:text-3xl font-extrabold mb-8 text-center tracking-tight"
-          style={{color:'var(--color-point)', textShadow:'0 2px 8px #0008'}}
+  className="text-2xl sm:text-3xl font-extrabold mb-8 text-center tracking-tight focus-visible:outline-point focus-visible:ring-2 focus-visible:ring-point"
+  style={{color:'var(--color-point)'}}
         tabIndex={-1}
       >
-          블로그 & 뉴스
+        블로그 & 뉴스
       </h2>
       <form
-        className="flex flex-wrap gap-4 sm:gap-6 justify-center mb-12 mt-2 bg-white/90 rounded-2xl shadow p-5 border border-orange-100"
-          style={{background:'var(--color-bg-card)', borderRadius:'1rem', boxShadow:'0 2px 8px #0002', border:'1px solid var(--color-border)', padding:'1.25rem'}} 
+        className="flex flex-wrap gap-4 sm:gap-6 justify-center mb-12 mt-2 rounded-2xl shadow p-5 border"
+        style={{background:'var(--color-bg-card)', borderRadius:'1rem', boxShadow:'0 2px 8px #0002', border:'1px solid var(--color-border)', padding:'1.25rem'}} 
         aria-label="블로그 검색 및 카테고리 필터"
         role="search"
         tabIndex={0}
@@ -32,22 +42,22 @@ export default function Blog() {
         <label htmlFor="blog-search" className="sr-only">검색어 입력</label>
         <input
           id="blog-search"
-            className="border-0 rounded-lg px-5 py-3 w-44 sm:w-64 text-base font-bold focus-visible:ring-2 shadow"
-            style={{background:'var(--color-bg-section)', color:'var(--color-point)', boxShadow:'0 1px 4px #0001'}} 
+          className="border-0 rounded-lg px-5 py-3 w-44 sm:w-64 text-base font-bold focus-visible:ring-2 shadow"
+          style={{background:'var(--color-bg-section)', color:'var(--color-point)', boxShadow:'0 1px 4px #0001'}} 
           placeholder="검색어 입력"
           aria-label="검색어 입력"
         />
         <label htmlFor="blog-category" className="sr-only">카테고리</label>
         <select
           id="blog-category"
-            className="border-0 rounded-lg px-5 py-3 text-base font-bold focus-visible:ring-2 shadow"
-            style={{background:'var(--color-bg-section)', color:'var(--color-point)', boxShadow:'0 1px 4px #0001'}} 
+          className="border-0 rounded-lg px-5 py-3 text-base font-bold focus-visible:ring-2 shadow"
+          style={{background:'var(--color-bg-section)', color:'var(--color-point)', boxShadow:'0 1px 4px #0001'}} 
           aria-label="카테고리 선택"
         >
           {CATEGORIES.map(cat => <option key={cat}>{cat}</option>)}
         </select>
       </form>
-      <div
+      <section
         className="grid grid-cols-1 sm:grid-cols-2 gap-8"
         role="list"
         aria-label="블로그/뉴스 목록"
@@ -55,20 +65,22 @@ export default function Blog() {
         {POSTS.map((post, i) => (
           <div
             key={i}
-            className="group flex flex-col gap-3 p-7 rounded-3xl hover:shadow-2xl hover:-translate-y-1 transition-all duration-200 min-h-[180px] cursor-pointer"
+            className="group flex flex-col gap-4 p-7 rounded-3xl hover:shadow-2xl hover:-translate-y-1 transition-all duration-200 min-h-[200px] cursor-pointer focus-visible:ring-2 focus-visible:ring-point"
             style={{background:'var(--color-bg-card)', color:'var(--color-text-main)', border:'2px solid var(--color-border)', boxShadow:'0 2px 8px #0002'}} 
             tabIndex={0}
             aria-label={`${post.title} 블로그 카드`}
           >
             <div className="flex items-center gap-3 mb-1">
               <span
-                className="inline-block px-3 py-1 rounded-full font-bold shadow-sm border text-base"
+                className="inline-block px-5 py-2 rounded-full font-bold shadow-sm border text-base min-h-[44px] min-w-[44px] flex items-center justify-center focus-visible:ring-2 focus-visible:ring-point"
                 style={{
                   background: 'var(--color-point-bg)',
                   color: 'var(--color-point)',
                   border: '1px solid var(--color-border)',
                   lineHeight:'1.1'
                 }}
+                tabIndex={0}
+                aria-label={post.category}
               >
                 {post.category}
               </span>
@@ -78,7 +90,7 @@ export default function Blog() {
             <div className="text-lg mb-1 min-h-[36px]" style={{color:'var(--color-text-sub)', lineHeight:'1.35'}}>{post.summary}</div>
           </div>
         ))}
-      </div>
+      </section>
     </section>
   );
 }

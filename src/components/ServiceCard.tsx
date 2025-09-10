@@ -13,13 +13,29 @@ export default function ServiceCard({ icon, title, description, className, child
   return (
     <div
       className={cn(
-        "flex flex-col items-center text-center p-6 m-0 rounded-2xl w-full h-full bg-[#3b4252]",
+        "flex flex-col items-center text-center p-6 m-0 rounded-2xl w-full h-full card-effect focus-ring",
         className
       )}
+      style={{ background: "var(--color-bg-card)" }}
+      tabIndex={0}
+      role="region"
+      aria-label={title}
     >
-      <div className="mb-4 text-[#7dd3fc] p-3 bg-[#232a34] rounded-full flex items-center justify-center w-16 h-16">{icon}</div>
-      <h3 className="font-bold text-lg mb-2 text-[#f4f4f5]">{title}</h3>
-      <p className="text-[#cbd5e1] text-sm md:text-base font-medium max-w-[280px] mx-auto">{description}</p>
+      <div
+        className="mb-4 p-3 rounded-full flex items-center justify-center w-16 h-16"
+        style={{ color: "var(--color-point)", background: "var(--color-bg-section)" }}
+      >
+        {icon}
+      </div>
+      <h3 className="mb-2" style={{ color: "var(--color-text-main)", fontWeight: 600 }}>
+        {title}
+      </h3>
+      <p
+        className="max-w-[280px] mx-auto"
+        style={{ color: "var(--color-text-sub)", fontSize: "var(--font-body-size)", fontWeight: 400 }}
+      >
+        {description}
+      </p>
       {children && <div className="mt-auto pt-4">{children}</div>}
     </div>
   );

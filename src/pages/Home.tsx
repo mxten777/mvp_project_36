@@ -15,25 +15,28 @@ function Home() {
         <meta property="og:description" content="스마트한의 주차, IoT, 영상 통합 스마트시티 솔루션" />
       </Helmet>
       <section
-        className="container max-w-5xl mx-auto py-8 sm:py-14 px-4 sm:px-8 text-center bg-[#23272f] rounded-3xl shadow-xl mt-6 mb-10 border-0"
+        className="container max-w-5xl mx-auto py-12 sm:py-20 px-4 sm:px-8 text-center rounded-3xl shadow-xl mt-6 mb-10 border-0 relative overflow-hidden"
         aria-labelledby="main-heading"
+        role="region"
       >
+        {/* Hero 배경 그라데이션 */}
+        <div aria-hidden="true" className="absolute inset-0 z-0 bg-gradient-to-br from-[var(--color-point)]/30 via-[var(--color-bg-section)]/80 to-[var(--color-bg-main)]/90 blur-2xl scale-110" />
         <h1
           id="main-heading"
-          className="text-3xl sm:text-4xl md:text-5xl font-extrabold mb-4 sm:mb-6 tracking-tight text-[#60a5fa] drop-shadow"
+          className="text-4xl sm:text-5xl md:text-6xl font-extrabold mb-4 sm:mb-6 tracking-tight drop-shadow relative z-10"
           tabIndex={-1}
         >
-          <span className="inline-block bg-gradient-to-r from-[#38bdf8] to-[#a3e635] bg-clip-text text-transparent">Total Solution for Smart City</span>
+          <span className="inline-block bg-gradient-to-r from-[var(--color-point)] to-[var(--color-success)] bg-clip-text text-transparent">Total Solution for Smart City</span>
         </h1>
-  <p className="mb-8 text-base sm:text-lg text-[#cbd5e1] max-w-2xl mx-auto font-medium">
+        <p className="mb-8 text-lg sm:text-xl max-w-2xl mx-auto font-medium text-[var(--color-text-sub)] relative z-10" id="main-desc">
           스마트한의 주차, IoT, 영상 통합 솔루션
         </p>
         <div
-          className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 sm:gap-8 my-10 max-w-6xl mx-auto"
+          className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 sm:gap-8 my-12 max-w-6xl mx-auto relative z-10"
           role="list"
           aria-label="스마트한 주요 서비스"
         >
-          <div className="bg-[#23272f] rounded-xl shadow-sm border-0 outline-none p-4 flex flex-col items-center min-h-[280px] transition-all duration-200 hover:shadow-md hover:-translate-y-1" style={{ outline: 'none !important' }}>
+          <div className="bg-[var(--color-bg-card)] rounded-xl shadow-sm border-0 outline-none p-4 flex flex-col items-center min-h-[280px] card-effect" tabIndex={0} role="listitem" aria-label="통합 주차 보안 시스템">
             <ServiceCard
               icon={ServiceIcons.parking}
               title="통합 주차 보안 시스템"
@@ -41,14 +44,15 @@ function Home() {
             >
               <a
                 href="/solutions/parking"
-                className="mt-4 inline-block px-5 py-2 rounded-full bg-[#38bdf8] text-[#18181b] font-bold shadow-sm hover:bg-[#0ea5e9] transition-all text-sm sm:text-base no-underline focus:ring-2 focus:ring-[#38bdf8] focus:outline-none border-0"
-                style={{ boxShadow: '0 2px 6px 0 #38bdf844', border: 'none !important' }}
+                className="mt-4 inline-block px-5 py-2 rounded-full bg-[var(--color-point)] text-[var(--color-bg-main)] font-bold shadow-sm hover:bg-[var(--color-success)] transition-base text-sm sm:text-base no-underline focus-ring border-0"
+                aria-label="통합 주차 보안 시스템 상세보기"
+                tabIndex={0}
               >
                 상세보기
               </a>
             </ServiceCard>
           </div>
-          <div className="bg-[#23272f] rounded-xl shadow-sm border-0 outline-none p-4 flex flex-col items-center min-h-[280px] transition-all duration-200 hover:shadow-md hover:-translate-y-1" style={{ outline: 'none !important' }}>
+          <div className="bg-[var(--color-bg-card)] rounded-xl shadow-sm border-0 outline-none p-4 flex flex-col items-center min-h-[280px] card-effect" tabIndex={0} role="listitem" aria-label="IoT 모니터링 시스템">
             <ServiceCard
               icon={ServiceIcons.iot}
               title="IoT 모니터링 시스템"
@@ -56,14 +60,15 @@ function Home() {
             >
               <a
                 href="/solutions/iot"
-                className="mt-4 inline-block px-5 py-2 rounded-full bg-[#38bdf8] text-[#18181b] font-bold shadow-sm hover:bg-[#0ea5e9] transition-all text-sm sm:text-base no-underline focus:ring-2 focus:ring-[#38bdf8] focus:outline-none border-0"
-                style={{ boxShadow: '0 2px 6px 0 #38bdf844', border: 'none !important' }}
+                className="mt-4 inline-block px-5 py-2 rounded-full bg-[var(--color-point)] text-[var(--color-bg-main)] font-bold shadow-sm hover:bg-[var(--color-success)] transition-base text-sm sm:text-base no-underline focus-ring border-0"
+                aria-label="IoT 모니터링 시스템 상세보기"
+                tabIndex={0}
               >
                 상세보기
               </a>
             </ServiceCard>
           </div>
-          <div className="bg-[#23272f] rounded-xl shadow-sm border-0 outline-none p-4 flex flex-col items-center min-h-[280px] transition-all duration-200 hover:shadow-md hover:-translate-y-1" style={{ outline: 'none !important' }}>
+          <div className="bg-[var(--color-bg-card)] rounded-xl shadow-sm border-0 outline-none p-4 flex flex-col items-center min-h-[280px] card-effect" tabIndex={0} role="listitem" aria-label="영상 시스템 (CCTV 통합)">
             <ServiceCard
               icon={ServiceIcons.cctv}
               title="영상 시스템 (CCTV 통합)"
@@ -71,17 +76,18 @@ function Home() {
             >
               <a
                 href="/solutions/cctv"
-                className="mt-4 inline-block px-5 py-2 rounded-full bg-[#38bdf8] text-[#18181b] font-bold shadow-sm hover:bg-[#0ea5e9] transition-all text-sm sm:text-base no-underline focus:ring-2 focus:ring-[#38bdf8] focus:outline-none border-0"
-                style={{ boxShadow: '0 2px 6px 0 #38bdf844', border: 'none !important' }}
+                className="mt-4 inline-block px-5 py-2 rounded-full bg-[var(--color-point)] text-[var(--color-bg-main)] font-bold shadow-sm hover:bg-[var(--color-success)] transition-base text-sm sm:text-base no-underline focus-ring border-0"
+                aria-label="영상 시스템 상세보기"
+                tabIndex={0}
               >
                 상세보기
               </a>
             </ServiceCard>
           </div>
         </div>
-        <div className="flex flex-col items-center my-8 sm:my-10">
+        <div className="flex flex-col items-center my-10">
           <Button
-            className="px-6 py-2 text-base font-medium rounded-full border border-[#38bdf8] bg-[#38bdf8] text-white shadow-sm hover:bg-[#0ea5e9] hover:text-white focus-visible:ring-2 focus-visible:ring-[#38bdf8] focus-visible:outline-none transition-all duration-200 flex items-center gap-2"
+            className="px-6 py-2 text-base font-medium rounded-full border border-[var(--color-point)] bg-[var(--color-point)] text-[var(--color-bg-main)] shadow-sm hover:bg-[var(--color-success)] hover:text-[var(--color-bg-main)] transition-base flex items-center gap-2 focus-ring"
             aria-label="상담 문의하기"
             onClick={() => setModalOpen(true)}
           >
@@ -90,12 +96,12 @@ function Home() {
           </Button>
         </div>
         <Modal open={modalOpen} onClose={() => setModalOpen(false)}>
-          <h2 className="text-xl font-bold mb-4 text-[#ff9800]">상담 문의하기</h2>
-          <form className="flex flex-col gap-4">
-            <input className="border rounded px-3 py-2" type="text" placeholder="이름" required />
-            <input className="border rounded px-3 py-2" type="tel" placeholder="연락처" required />
-            <textarea className="border rounded px-3 py-2" placeholder="문의 내용" rows={4} required />
-            <button type="submit" className="bg-[#ff9800] text-white font-semibold rounded py-2 mt-2 hover:bg-[#ffb74d] transition">문의 보내기</button>
+          <h2 className="text-xl font-bold mb-4 text-[#ff9800]" id="contact-modal-title">상담 문의하기</h2>
+          <form className="flex flex-col gap-4" aria-labelledby="contact-modal-title">
+            <input className="border rounded px-3 py-2" type="text" placeholder="이름" required aria-label="이름" />
+            <input className="border rounded px-3 py-2" type="tel" placeholder="연락처" required aria-label="연락처" />
+            <textarea className="border rounded px-3 py-2" placeholder="문의 내용" rows={4} required aria-label="문의 내용" />
+            <button type="submit" className="bg-[#ff9800] text-white font-semibold rounded py-2 mt-2 hover:bg-[#ffb74d] transition focus-ring">문의 보내기</button>
           </form>
         </Modal>
       </section>

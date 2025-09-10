@@ -18,6 +18,23 @@ import Admin from "./pages/Admin";
 import { useEffect } from "react";
 
 function App() {
+  // 진입 시 theme(localStorage) 및 시스템 모드 감지, .light 클래스 토글
+  useEffect(() => {
+    const applyTheme = () => {
+      const saved = localStorage.getItem("theme");
+      const prefersLight = window.matchMedia("(prefers-color-scheme: light)").matches;
+      if (saved === "light" || (!saved && prefersLight)) {
+        document.documentElement.classList.add("light");
+        document.body.classList.add("light");
+      } else {
+        document.documentElement.classList.remove("light");
+        document.body.classList.remove("light");
+      }
+    };
+    applyTheme();
+    window.addEventListener("storage", applyTheme);
+    return () => window.removeEventListener("storage", applyTheme);
+  }, []);
   // Edge 브라우저 및 고대비 모드에서 테두리 관련 이슈 해결을 위한 전역 스타일 적용
   useEffect(() => {
     // 스타일 요소 생성 및 추가

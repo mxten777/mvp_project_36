@@ -37,7 +37,7 @@ export default function Admin() {
         <h2
           id="admin-heading"
           className="text-3xl sm:text-4xl font-extrabold mb-12 text-center tracking-tight drop-shadow leading-tight"
-          style={{color:'var(--color-point)', textShadow:'0 2px 8px rgba(0,0,0,0.5)'}}
+          style={{color:'var(--color-point)'}}
           tabIndex={-1}
         >
           관리자(Admin)

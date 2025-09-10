@@ -2,35 +2,43 @@ import { useEffect, useState } from "react";
 import { Moon, Sun } from "lucide-react";
 
 export default function DarkModeToggle() {
-  const [dark, setDark] = useState(() =>
+  const [isLight, setIsLight] = useState(() =>
     typeof window !== "undefined"
-      ? document.documentElement.classList.contains("dark")
+      ? document.documentElement.classList.contains("light")
       : false
   );
 
   useEffect(() => {
-    if (dark) {
-      document.documentElement.classList.add("dark");
-      localStorage.setItem("theme", "dark");
-    } else {
-      document.documentElement.classList.remove("dark");
+    if (isLight) {
+      document.documentElement.classList.add("light");
+      document.body.classList.add("light");
       localStorage.setItem("theme", "light");
+    } else {
+      document.documentElement.classList.remove("light");
+      document.body.classList.remove("light");
+      localStorage.setItem("theme", "dark");
     }
-  }, [dark]);
+  }, [isLight]);
 
   useEffect(() => {
     const saved = localStorage.getItem("theme");
-    if (saved === "dark") setDark(true);
+    if (saved === "light") setIsLight(true);
+    else if (saved === "dark") setIsLight(false);
+    else {
+      // 시스템 모드 반영
+      const prefersLight = window.matchMedia("(prefers-color-scheme: light)").matches;
+      setIsLight(prefersLight);
+    }
   }, []);
 
   return (
     <button
-      aria-label={dark ? "라이트 모드로 전환" : "다크 모드로 전환"}
+      aria-label={isLight ? "다크 모드로 전환" : "라이트 모드로 전환"}
       className="ml-4 p-2 rounded focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 bg-transparent"
-      onClick={() => setDark((d) => !d)}
+      onClick={() => setIsLight((v) => !v)}
       type="button"
     >
-      {dark ? <Sun size={20} /> : <Moon size={20} />}
+      {isLight ? <Moon size={20} /> : <Sun size={20} />}
     </button>
   );
 }

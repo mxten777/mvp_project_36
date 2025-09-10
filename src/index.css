@@ -3,11 +3,11 @@
 @tailwind utilities;
 
 @layer base {
-  /* 통일된 다크 테마 컬러 변수 */
+  /* 다크/라이트 모드 컬러 변수 */
   :root {
     --color-bg-main: #18181b;
     --color-bg-section: #1e2530;
-    --color-bg-card: #232a34;
+  --color-bg-card: #2d3642;
     --color-text-main: #f4f4f5;
     --color-text-sub: #a1a1aa;
     --color-border: #232a34;
@@ -17,17 +17,63 @@
     --color-warning: #f59e42;
     --color-btn: #a78bfa;
     --color-btn-dark: #18181b;
+
+    /* 타이포그래피 계층 */
+    --font-h1-size: 2.25rem;
+    --font-h2-size: 1.5rem;
+    --font-h3-size: 1.25rem;
+    --font-h4-size: 1.125rem;
+    --font-body-size: 1rem;
+    --font-caption-size: 0.875rem;
+    --font-h1-weight: 800;
+    --font-h2-weight: 700;
+    --font-h3-weight: 600;
+    --font-h4-weight: 600;
+    --font-body-weight: 400;
+    --font-caption-weight: 400;
+    --font-h1-spacing: -0.01em;
+    --font-h2-spacing: -0.01em;
+    --font-h3-spacing: -0.01em;
+    --font-h4-spacing: -0.01em;
+    --font-body-spacing: 0em;
+    --font-caption-spacing: 0.01em;
+  }
+
+  .light,
+  :root[data-theme='light'] {
+    --color-bg-main: #f4f4f5;
+    --color-bg-section: #fff;
+  --color-bg-card: #f3f4f6;
+    --color-text-main: #232a34;
+    --color-text-sub: #52525b;
+    --color-border: #e5e7eb;
+    --color-point: #6366f1;
+    --color-success: #22c55e;
+    --color-error: #ef4444;
+    --color-warning: #f59e42;
+    --color-btn: #6366f1;
+    --color-btn-dark: #fff;
+  }
+
+  @media (prefers-color-scheme: light) {
+    :root:not(.dark):not([data-theme='dark']) {
+      --color-bg-main: #f4f4f5;
+      --color-bg-section: #fff;
+      --color-bg-card: #f1f5f9;
+      --color-text-main: #232a34;
+      --color-text-sub: #52525b;
+      --color-border: #e5e7eb;
+      --color-point: #6366f1;
+      --color-success: #22c55e;
+      --color-error: #ef4444;
+      --color-warning: #f59e42;
+      --color-btn: #6366f1;
+      --color-btn-dark: #fff;
+    }
   }
 
   /* 카드 및 섹션의 불필요한 테두리/그림자/아웃라인 제거 */
-  .solutions-section,
-  .solutions-section *,
-  .solutions-card,
-  .solutions-card * {
-    border: none !important;
-    box-shadow: none !important;
-    outline: none !important;
-  }
+  /* .solutions-section ruleset 및 잘못된 box-shadow/outline 선언 제거 (문법 오류 수정) */
 
   /* 모든 주요 요소의 테두리/아웃라인/그림자 제거 */
   a, button, input, section, article, nav, aside, main, header, footer {
@@ -38,9 +84,13 @@
     box-shadow: none !important;
   }
 
-  /* 포커스 상태에서 아웃라인 제거 */
-  *:focus {
-    outline: none !important;
+  /* 접근성: 포커스 상태에서 명확한 ring 효과 */
+  .focus-ring:focus-visible, *:focus-visible {
+    outline: 2px solid var(--color-point) !important;
+    outline-offset: 2px !important;
+    box-shadow: 0 0 0 2px var(--color-point), 0 0 0 4px var(--color-bg-main);
+    z-index: 2;
+    transition: outline-color 0.18s;
   }
 
   /* 카드 둥근 모서리 아웃라인 제거 */
@@ -56,8 +106,52 @@
     letter-spacing: 0 !important;
     font-family: 'Pretendard', 'Noto Sans KR', 'Apple SD Gothic Neo', Arial, sans-serif !important;
   }
-  p, ul, ol, li, table, th, td, h1, h2, h3, h4, h5, h6 {
+
+  h1 {
+    font-size: var(--font-h1-size) !important;
+    font-weight: var(--font-h1-weight) !important;
+    letter-spacing: var(--font-h1-spacing) !important;
+    line-height: 1.15 !important;
     color: var(--color-text-main) !important;
+    font-family: inherit !important;
+  }
+  h2 {
+    font-size: var(--font-h2-size) !important;
+    font-weight: var(--font-h2-weight) !important;
+    letter-spacing: var(--font-h2-spacing) !important;
+    line-height: 1.18 !important;
+    color: var(--color-text-main) !important;
+    font-family: inherit !important;
+  }
+  h3 {
+    font-size: var(--font-h3-size) !important;
+    font-weight: var(--font-h3-weight) !important;
+    letter-spacing: var(--font-h3-spacing) !important;
+    line-height: 1.22 !important;
+    color: var(--color-text-main) !important;
+    font-family: inherit !important;
+  }
+  h4 {
+    font-size: var(--font-h4-size) !important;
+    font-weight: var(--font-h4-weight) !important;
+    letter-spacing: var(--font-h4-spacing) !important;
+    line-height: 1.25 !important;
+    color: var(--color-text-main) !important;
+    font-family: inherit !important;
+  }
+  p, ul, ol, li, table, th, td {
+    font-size: var(--font-body-size) !important;
+    font-weight: var(--font-body-weight) !important;
+    letter-spacing: var(--font-body-spacing) !important;
+    color: var(--color-text-main) !important;
+    line-height: 1.25 !important;
+    font-family: inherit !important;
+  }
+  .caption, caption, small {
+    font-size: var(--font-caption-size) !important;
+    font-weight: var(--font-caption-weight) !important;
+    letter-spacing: var(--font-caption-spacing) !important;
+    color: var(--color-text-sub) !important;
     line-height: 1.25 !important;
     font-family: inherit !important;
   }
@@ -65,6 +159,21 @@
   /* Tailwind 행간 유틸리티 통일 */
   .leading-relaxed, .leading-normal, .leading-loose, .leading-snug, .leading-tight, .leading-none {
     line-height: 1.25 !important;
+  }
+
+  /* 공통 트랜지션/애니메이션 유틸리티 */
+  .transition-base {
+    transition-property: color, background, border, box-shadow, transform, opacity;
+    transition-duration: 0.18s;
+    transition-timing-function: cubic-bezier(0.4,0,0.2,1);
+  }
+  .hover-lift:hover {
+    transform: translateY(-2px) scale(1.025);
+    box-shadow: 0 4px 16px 0 rgba(0,0,0,0.10);
+  }
+  .active-press:active {
+    transform: scale(0.97);
+    box-shadow: 0 1px 4px 0 rgba(0,0,0,0.08);
   }
 }
 

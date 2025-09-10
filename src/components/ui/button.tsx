@@ -4,16 +4,16 @@ import { cva, type VariantProps } from "class-variance-authority"
 import { cn } from "../../lib/utils"
 
 const buttonVariants = cva(
-  "inline-flex items-center justify-center rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50",
+  "inline-flex items-center justify-center rounded-md text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--color-point)] focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50",
   {
     variants: {
       variant: {
-        default: "bg-primary text-primary-foreground hover:bg-primary/90",
-        destructive: "bg-destructive text-destructive-foreground hover:bg-destructive/90",
-        outline: "border border-input bg-background hover:bg-accent hover:text-accent-foreground",
-        secondary: "bg-secondary text-secondary-foreground hover:bg-secondary/80",
-        ghost: "hover:bg-accent hover:text-accent-foreground",
-        link: "underline-offset-4 hover:underline text-primary",
+        default: "bg-[var(--color-btn)] text-[var(--color-btn-dark)] hover:bg-[var(--color-point)] hover:text-[var(--color-bg-main)]",
+        destructive: "bg-[var(--color-error)] text-white hover:bg-red-700",
+        outline: "border border-[var(--color-border)] bg-transparent hover:bg-[var(--color-bg-section)] hover:text-[var(--color-point)]",
+        secondary: "bg-[var(--color-bg-section)] text-[var(--color-text-main)] hover:bg-[var(--color-bg-card)]",
+        ghost: "hover:bg-[var(--color-bg-section)] hover:text-[var(--color-point)]",
+        link: "underline-offset-4 hover:underline text-[var(--color-point)]",
       },
       size: {
         default: "h-10 px-4 py-2",
@@ -40,7 +40,7 @@ const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
     const Comp = asChild ? Slot : "button"
     return (
       <Comp
-        className={cn(buttonVariants({ variant, size, className }))}
+        className={cn("btn-effect focus-ring", buttonVariants({ variant, size, className }))}
         ref={ref}
         {...props}
       />
